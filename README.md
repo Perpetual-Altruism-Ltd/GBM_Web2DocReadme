@@ -987,7 +987,7 @@ The /transactions/ endpoint operates with its own routes, with each named accord
 -   <b>topUp</b> - For a user to top up their balance
 -   <b>withdraw</b> - For a user to withdraw from their balance
 
-Each of those transactions fire back on a webhook when processed, as JSON, the entities impacted by the transaction in their final state at the end of the transaction. This is not meant to be sent directly to end user, but instead to be parsed by your middleware so that each user websocket/other notification method you implemented get notified independatly with the relevant data.              
+Each of those transactions fire back on a webhook when processed, as JSON, the entities impacted by the transaction in their final state at the end of the transaction. This is not meant to be sent directly to end user, but instead to be parsed by your middleware so that each user websocket/other notification method you implemented get notified independently with the relevant data.              
 
 Transactions are also currently being expanded to support better non-comitted payment intents (eg: Placing a bid but paying with Card/Open banking, and waiting for payment confirmation before processing the bid).                          
 topUp is to be called by the middleware everytime capital is confirmed as commited. Without enough capital commited in the relevant currency, a bid will fail.            
